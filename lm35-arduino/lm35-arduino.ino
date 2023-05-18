@@ -16,5 +16,5 @@ void loop() {
   // Print in the serial Monitor
   Serial.println(celsiusTemp);
   
-  delay(500); // we read signal every 500ms
+  delay(300000); // we read signal every 500ms
 }

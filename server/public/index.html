@@ -3,28 +3,100 @@
   <head>
     <meta charset="utf-8">
     <title>Temperature with Nodejs</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <style media="screen">
-    html, body {
-  height:100%;
-}
-body {
-  display:flex;
-  align-items:center;
-  background: #34495e;
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-        <div class="row justify-content-center align-self-center">
-          <div class="card">
-            <h1 id="temperature" class="display-1 p-4"></h1>
-          </div>
+    <div class="head_container">
+      <div class="head_card">
+        <h2 id="title" class="display titile">Estaciones meteorologicas</h1>
+      </div>
+    </div>
+    <div class="table_data">
+      <div class="table_data_card">
+        <table style="width: 50%;">
+          <tr>
+            <td>ESTACION :</td>
+            <td>14379</td>
+          </tr>
+          <tr>
+            <td>NOMBRE :</td>
+            <td>MEZCALA</td>
+          </tr>
+          <tr>
+            <td>ESTADO :</td>
+            <td>JALISCO</td>
+          </tr>
+          <tr>
+            <td>MUNICIPIO :</td>
+            <td>PONCITLAN</td>
+          </tr>
+          <tr>
+            <td>SITUACION :</td>
+            <td>OPERANDO</td>
+          </tr>
+          <tr>
+            <td>ORGANISMO :</td>
+            <td>CONAGUA-DGE</td>
+          </tr>
+          <tr>
+            <td>CVE-OMM :</td>
+            <td>Nulo</td>
+          </tr>
+          <tr>
+            <td>LATITUD :</td>
+            <td>020.3360</td>
+          </tr>
+          <tr>
+            <td>LONGITUD :</td>
+            <td>-103.0180</td>
+          </tr>
+          <tr>
+            <td>ALTITUD :</td>
+            <td>1,530 msnm</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div class="temp_container">
+      <div class="temp_card">
+        <h1 id="temp" class="display temperature">Temperatura: <label id="temperature">25ºC  </label><!-- <label id="clock-div" class="display clock"></label> --></h1>
+      </div>
+    </div>
+
+    <div class="humedad_container">
+      <div class="humedad_card">
+        <h1 id="hum" class="display humedad">Humedad: 6.1 MM</h1>
+      </div>
+    </div>
+
+    <div class="precipitacion_container">
+      <div class="precipitacion_card">
+        <h1 id="precip" class="display precipitacion">Precipitacion: 0 MM</h1>
+      </div>
+    </div>
+
+    <div class="precipitacion_container">
+      <div class="precipitacion_card">
+        <h1 id="precip" class="display precipitacion">TMAX: 29.5</h1>
+      </div>
+    </div>
+
+    <div class="precipitacion_container">
+      <div class="precipitacion_card">
+        <h1 id="precip" class="display precipitacion">TMIN: 14</h1>
       </div>
     </div>
 
     <script src="socket.io/socket.io.js" charset="utf-8"></script>
     <script src="/main.js" charset="utf-8"></script>
+    <script>
+      window.onload = displayClock();
+      function displayClock(){
+        var display = new Date().toLocaleTimeString();
+        document.getElementById("clock-div").innerHTML = display;
+        setTimeout(displayClock, 1000); 
+      };
+      </script>
   </body>
 </html>

@@ -1,0 +1,55 @@
+body{
+	background: lightblue;
+	height: 1000px;
+	background-image: linear-gradient(lightblue, purple);
+	margin: auto;
+}
+
+h2{
+	position: relative;
+	margin: auto;
+	top: px;
+	line-height: 2.3;
+	word-spacing: 5px;
+	width: 100%;
+	height: 70px;
+	font-size:xx-large;
+	letter-spacing: 4px;
+	text-align: center; 
+	font-family: cursive;
+	background: rgb(119, 164, 193);
+	border-radius: 4px;
+	text-transform: capitalize;
+	color:white;
+}
+
+.table_data_card{
+	margin: auto;
+	width: 50%;
+	font-size: 24px;
+	text-align: center;
+    padding-left: 450px; 
+	font-family: monospace;
+	border-radius: 4px;
+	text-transform: capitalize;
+	color:white;
+}
+
+#temp, #hum, #precip{
+    position: relative;
+	margin: auto;
+	top: 70px;
+	line-height: 2.3;
+	word-spacing: 5px;
+	width: 50%;
+	height: 70px;
+	font-size:xx-large;
+	letter-spacing: 4px;
+	text-align: center; 
+	font-family: monospace;
+	background: none;
+	border-radius: 4px;
+	text-transform: capitalize;
+	color:white;
+}
+
